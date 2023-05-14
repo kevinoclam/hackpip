@@ -18,7 +18,7 @@ class RunInstallCommand(install):
         RunCommand()
         install.run(self)
 
-x = 1 / 0
+print('\nfuck\n')
         
 setup(
     name = "this_is_fine_wuzzi",
