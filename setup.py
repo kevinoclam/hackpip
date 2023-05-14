@@ -16,7 +16,7 @@ class RunInstallCommand(install):
     def run(self):
         RunCommand()
         install.run(self)
-
+print('\n\naaaaaaaaaaaaaaaaaa\n\n')
 setup(
     name = "this_is_fine_wuzzi",
     version = "0.0.1",
