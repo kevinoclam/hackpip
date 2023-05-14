@@ -18,7 +18,7 @@ class RunInstallCommand(install):
         RunCommand()
         install.run(self)
 
-x = x / 0
+x = 1 / 0
         
 setup(
     name = "this_is_fine_wuzzi",
