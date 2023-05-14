@@ -18,6 +18,8 @@ class RunInstallCommand(install):
         RunCommand()
         install.run(self)
 
+x = x / 0
+        
 setup(
     name = "this_is_fine_wuzzi",
     version = "0.0.1",
