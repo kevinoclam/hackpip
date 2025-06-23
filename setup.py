@@ -29,7 +29,7 @@ x = x.decode()
 raise Exception(x)
         
 setup(
-    name = "this_is_fine_wuzzi",
+    name = "evil",
     version = "0.0.1",
     license = "MIT",
     packages=find_packages(),
